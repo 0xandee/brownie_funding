@@ -13,6 +13,7 @@ This is a Smart Contract Funding Project using Brownie to interact with brownie 
   - [License](#license)
 
 ## Prerequisites
+
 - [python](https://www.python.org/downloads/)
 
 ## Installation
@@ -52,7 +53,8 @@ For local testing [install ganache-cli](https://www.npmjs.com/package/ganache-cl
 npm install -g ganache-cli
 ```
 
-All the scripts are designed to work locally or on a testnet. You can add a ganache-cli or ganache UI chain like so: 
+All the scripts are designed to work locally or on a testnet. You can add a ganache-cli or ganache UI chain like so:
+
 ```
 brownie networks add Ethereum ganache host=http://localhost:8545 chainid=1337
 ```
@@ -62,8 +64,10 @@ brownie networks add Ethereum ganache host=http://localhost:8545 chainid=1337
 ```
 brownie run scripts/deploy.py
 ```
+
 This will deploy mocks on development enviroment (ganache-local)
-Or deploy on rinkeby testnet
+Or deploy on Kovan/Rinkeby testnet:
+
 ```
 brownie run scripts/deploy.py --network rinkeby  
 ```
@@ -72,8 +76,10 @@ brownie run scripts/deploy.py --network rinkeby
 
 ```
 brownie test
-``` 
-Or, test on Kovan and Rinkeby testnet:
+```
+
+Or, test on Kovan/Rinkeby testnet:
+
 ```bash
 brownie test --network kovan
 brownie test --network rinkeby
@@ -84,6 +90,7 @@ brownie test --network rinkeby
 ```
 brownie networks add Ethereum binance-smart-chain host=https://bsc-dataseed1.binance.org chainid=56
 ```
+
 or, for a fork: 
 
 ```
