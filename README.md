@@ -2,6 +2,16 @@
 
 This is a Smart Contract Funding Project using Brownie to interact with brownie ganache / local ganache / mainnet-fork / testnet in a python enviroment.
 
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Testnet Development](#testnet-development)
+  - [Local Development](#local-development)
+  - [Deploy to a testnet / Scripts](#deploy-to-a-testnet--scripts)
+  - [Testing on local blockchain](#testing-on-local-blockchain)
+  - [Adding additional Chains](#adding-additional-chains)
+  - [Resources](#resources)
+  - [License](#license)
+
 ## Prerequisites
 - [python](https://www.python.org/downloads/)
 
@@ -21,8 +31,6 @@ pip install eth-brownie
 ```
 
 ## Testnet Development
-
-### With environment variables
 
 Set your `WEB3_INFURA_PROJECT_ID` by creating a project of [Infura](https://infura.io/), and `PRIVATE_KEY` [environment variables](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html) from your ethereum wallet like [metamask](https://metamask.io/).
 
@@ -65,12 +73,29 @@ brownie run scripts/deploy.py --network rinkeby
 ```
 brownie test
 ``` 
+Or, test on Kovan and Rinkeby testnet:
+```bash
+brownie test --network kovan
+brownie test --network rinkeby
+```
+
+## Adding additional Chains
+
+```
+brownie networks add Ethereum binance-smart-chain host=https://bsc-dataseed1.binance.org chainid=56
+```
+or, for a fork: 
+
+```
+brownie networks add development binance-fork cmd=ganache-cli host=http://127.0.0.1 fork=https://bsc-dataseed1.binance.org accounts=10 mnemonic=brownie port=8545
+```
 
 ## Resources
 
 * [Chainlink Documentation](https://docs.chain.link/docs)
 * [Brownie documentation](https://eth-brownie.readthedocs.io/en/stable/).
 * [freeCodeCamp Solidity, Blockchain, and Smart Contract Course](https://www.youtube.com/watch?v=M576WGiDBdQ&list=WL&ab_channel=freeCodeCamp.org).
+
 ## License
 
 This project is licensed under the [MIT license](LICENSE).
