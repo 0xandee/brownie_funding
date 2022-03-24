@@ -1,6 +1,6 @@
 # Brownie Funding Project
 
-This is a Smart Contract Funding Project using Brownie to interact with brownie ganache / local ganache / mainnet-fork / testnet in a python enviroment.
+This is a Simple Funding Project using Brownie to interact with brownie ganache / local ganache / mainnet-fork / testnet in a python enviroment. With features like send fund with entrance fee and withdraw fund.
 
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
